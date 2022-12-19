@@ -19,6 +19,8 @@ public class MultiThreading01 {
         counter3.start();
         System.out.println("--------------------------------");
         counter4.start();
+        counter3.join();/// counter 3 bitmeden counter 4 gecme
+        counter4.join();// counter thread bitesiye kadar bekle
         long endTime2 = System.currentTimeMillis();
         System.out.println("WithMultiThread ile Gecen süre : "+ (endTime2-startTime2));
 

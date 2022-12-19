@@ -13,7 +13,6 @@ public class ThreadCreationWays {
         // run() ile cagrildiginda thread degismez sadece method calisir
         // start () da ise once thread calisir sonra run calsir.
 
-
         MyRunnable runnable = new MyRunnable();
         Thread thread2 = new Thread(runnable);
         thread2.start();
@@ -44,14 +43,11 @@ public class ThreadCreationWays {
         });
         thread4.start();
 
-        System.out.println("Main bitti");
+        System.out.println("Main methodu bitti"); //  bu yazi ciktinin neresinde gozukecegi ile ilgili kesin bir sey diyemeyiz
         Thread thread5 = new Thread(()->{
 
             System.out.println("thread 5 calisti");
         });
-
-
-
     }
 
     // 1.yol  : Thread classini extends ederek
@@ -61,7 +57,6 @@ class MyThread extends Thread{
     public void run() {  // ---> Thread class indan override
         System.out.println("MyThread threadi calisiyor ..");
     }
-
 
 
 }//2.yol Runnable interface i implement ederek yapma
